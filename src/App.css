@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+
+.input-group {
+  width: 100%;
+}
+
+.input-group input {
+  width: 35%;
+  margin: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+}
+
+.input-group button {
+  /* width: 60%; */
+  /* margin: auto; */
+  padding: 12px;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  width: 10%;
+  color: #fff;
+  background-color: #6c757d;
+  position: relative;
+}
+
+.input-group button:hover {
+  color: #282C34;
+  transition: ease 0.7s;
+  background-color: #fff;
+  border: 1px solid #6c757d;
+}
+
+/*.input-group button:after {*/
+  /*content: "";*/
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*top: 0;*/
+  /*width: 0;*/
+  /*color: #fff;*/
+  /*height: 100%;*/
+  /*background: limegreen;*/
+  /*opacity: 0;*/
+/*}*/
+/*.input-group button:hover:after {*/
+  /*width: 100%;*/
+  /*opacity: 1;*/
+  /*transition: 500ms;*/
+  /*-webkit-transition: 500ms;*/
+/*}*/
