@@ -1,15 +1,16 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import allUsersReducer from '../reducers/allUsersReducer';
 import { createEpicMiddleware } from 'redux-observable';
-import { reducer }  from '../redux-actions/search';
-import rootEpic from '../epics';
+import { reducer, counter, userDataReducer }  from '../redux-actions/search';
 
-const epicMiddleware = createEpicMiddleware();
+export const epicMiddleware = createEpicMiddleware();
 
 const rootReducer = combineReducers(
     {
         allUsers: allUsersReducer,
         reducer,
+        counter,
+        userDataReducer,
     }
 );
 
@@ -19,7 +20,5 @@ const configureStore = () => {
         applyMiddleware(epicMiddleware)
     );
 };
-
-epicMiddleware.run(rootEpic);
 
 export default configureStore;
